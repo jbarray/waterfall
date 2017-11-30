@@ -29,7 +29,6 @@ function  getMinHIndex(arr,val) {
         }
     }
 }
-changePosition();
 
 //滚动条下拉的时候,屏幕底部开始加载图片
 //检测是否具备加载数据块的条件
@@ -38,6 +37,8 @@ function  checkScroll(){
     var screenHeight=document.body.clientHeight+document.body.scrollTop;
     return (picHeight < screenHeight);
 }
+window.onload=function () {
+    changePosition();
     window.onscroll=function (){
         if(checkScroll){
             for(var i=0;i<newPicture.data.length;i++){
@@ -54,5 +55,6 @@ function  checkScroll(){
             changePosition();//让后来加入的图片也能顺应瀑布流的效果
         }
     };
+};
 
 
