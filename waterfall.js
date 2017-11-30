@@ -33,7 +33,7 @@ function  getMinHIndex(arr,val) {
 //滚动条下拉的时候,屏幕底部开始加载图片
 //检测是否具备加载数据块的条件
 function  checkScroll(){
-    var picHeight=Math.floor(boxArr[boxArr.length-1].offsetHeight/2)+boxArr[boxArr.length-1].offsetTop;
+    var picHeight=Math.floor(boxArr[boxArr.length-10].offsetHeight/2)+boxArr[boxArr.length-10].offsetTop;
     var screenHeight=document.body.clientHeight+document.body.scrollTop;
     return (picHeight < screenHeight);
 }
